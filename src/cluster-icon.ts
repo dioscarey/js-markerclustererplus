@@ -207,12 +207,7 @@ export class ClusterIcon extends OverlayViewSafe {
 
     // March 1, 2018: Fix for this 3.32 exp bug, https://issuetracker.google.com/issues/73571522
     // But it doesn't work with earlier releases so do a version check.
-    // if (gmVersion >= 332) {
-      // Ugly version-dependent code
-      // google.maps.event.addDomListener(this.div_, "touchstart", (e) => {
-      //   e.stopPropagation();
-      // });
-    // }
+    // Lack of tests.
 
     google.maps.event.addDomListener(this.div_, "click", (e) => {
       cMouseDownInCluster = false;
